@@ -250,3 +250,57 @@
 // root.render(<App />);
 
 // export default App;
+
+
+//Slot machine*****************************************************
+
+ import React from "react";
+//  import{Theme} from 'emoji-picker-react';
+import"./App.css";
+const SlotM= (props) =>{
+    let x= props.x;
+    let y= props.y;
+    let z= props.z;
+    if((x===y)&&(y===z)){
+        return(
+            <>
+            <div className='slot_inner'>
+                <h1>
+                   
+                    {x} {y} {z}
+                    </h1>
+                    <h1>This is Matching</h1>
+                    <hr></hr>
+            </div>
+            </>
+        );
+    }
+    else{
+        return(
+            <>
+            <div className='slot_inner'>
+                <h1>
+                   
+                    {x} {y} {z}
+                    </h1>
+                    <h1>This is Not Matching</h1>
+                    <hr></hr>
+            </div>
+            </>
+        );
+    }
+}
+
+ const App = () => {
+    return(
+        <>
+    <h1 className="heading_style" > Welcome to Slot machine game</h1> 
+    <div className="slotmachine">
+    <SlotM x="🐸" y="🐸" z="🐸"/> 
+    <SlotM x="🤡" y="🐵" z="🤡" />
+    <SlotM x="🐵" y="🐵" z="🐸" />
+    </div>
+    </>
+ );
+ };
+ export default App;
