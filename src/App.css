@@ -1,4 +1,6 @@
-.heading_style{
+/* this css use in slot machine */
+/* **************************************** */
+/* .heading_style{
     text-align: center;
     padding: 30px 0;
     font-family: "Raleway",sans-serif;
@@ -15,4 +17,40 @@
 }
 .slotmachine{
     border-radius: 2px;
+} */
+/* ***************************************** */
+/* ******************Events css ************************ */
+
+/* button{
+    padding:12px 20px;
+    background: yellowgreen;
+    color:white;
+    border:2px solid ;
+    outline:none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+} */
+/* 
+*************************form css**************************** */
+/* button{
+    
+    padding:12px 20px;
+    background: yellowgreen;
+    color:white;
+    border:2px solid ;
+    outline:none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
 }
+input{
+    width: 50%;
+    padding:10px 20px;
+    border:none;
+    outline:none;
+    margin:20px 0;
+    text-align: center;
+} */
+

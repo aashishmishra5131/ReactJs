@@ -254,53 +254,199 @@
 
 //Slot machine*****************************************************
 
- import React from "react";
-//  import{Theme} from 'emoji-picker-react';
-import"./App.css";
-const SlotM= (props) =>{
-    let x= props.x;
-    let y= props.y;
-    let z= props.z;
-    if((x===y)&&(y===z)){
-        return(
-            <>
-            <div className='slot_inner'>
-                <h1>
+//  import React,{ useState }from "react";
+// //  import{Theme} from 'emoji-picker-react';
+// import"./App.css";
+// const SlotM= (props) =>{
+//     let x= props.x;
+//     let y= props.y;
+//     let z= props.z;
+//     if((x===y)&&(y===z)){
+//         return(
+//             <>
+//             <div className='slot_inner'>
+//                 <h1>
                    
-                    {x} {y} {z}
-                    </h1>
-                    <h1>This is Matching</h1>
-                    <hr></hr>
-            </div>
-            </>
-        );
-    }
-    else{
-        return(
-            <>
-            <div className='slot_inner'>
-                <h1>
+//                     {x} {y} {z}
+//                     </h1>
+//                     <h1>This is Matching</h1>
+//                     <hr></hr>
+//             </div>
+//             </>
+//         );
+//     }
+//     else{
+//         return(
+//             <>
+//             <div className='slot_inner'>
+//                 <h1>
                    
-                    {x} {y} {z}
-                    </h1>
-                    <h1>This is Not Matching</h1>
-                    <hr></hr>
-            </div>
-            </>
-        );
-    }
-}
+//                     {x} {y} {z}
+//                     </h1>
+//                     <h1>This is Not Matching</h1>
+//                     <hr></hr>
+//             </div>
+//             </>
+//         );
+//     }
+// }
 
- const App = () => {
-    return(
-        <>
-    <h1 className="heading_style" > Welcome to Slot machine game</h1> 
-    <div className="slotmachine">
-    <SlotM x="🐸" y="🐸" z="🐸"/> 
-    <SlotM x="🤡" y="🐵" z="🤡" />
-    <SlotM x="🐵" y="🐵" z="🐸" />
-    </div>
+//  const App = () => {
+//     return(
+//         <>
+//     <h1 className="heading_style" > Welcome to Slot machine game</h1> 
+//     <div className="slotmachine">
+//     <SlotM x="🐸" y="🐸" z="🐸"/> 
+//     <SlotM x="🤡" y="🐵" z="🤡" />
+//     <SlotM x="🐵" y="🐵" z="🐸" />
+//     </div>
+//     </>
+//  );
+//  };
+// *****************Time****************************
+// const App=()=>{
+//     let time=new Date().toLocaleTimeString();
+
+//     const [ctime, setCtime]=useState(time);
+//     const UpdateTime=()=>{
+//          time=new Date().toLocaleTimeString();
+//          setCtime(time);
+//     };
+//     setInterval(UpdateTime,1000);
+        
+   
+//     return(
+//         <>
+//         <h1 className="time">{ctime}</h1>
+       
+//         </>
+//     );
+// }
+
+//***************************Events***************************
+
+// import React,{useState} from "react";
+// import "./App.css";
+// const App=()=>{
+//     const purple="#8e44ad";
+//     const [bg,setBg] =useState(purple);
+
+//     const bgChange =()=>{
+//         let newBg="#344495e";
+//       setBg(newBg);
+//     };
+//     return(
+//     <>
+//        <div style={{backgroundColor:bg}}>
+//         <button onClick={bgChange }>Click me</button>
+//       </div>
+//     </>
+//     );
+// };
+
+
+
+
+
+//************************************form**************************
+
+// import React,{useState} from 'react';
+// import './App.css';
+// const App =() =>{
+//    const[name,setName]=useState();
+//    const[fullName,setFullname]=useState();
+//   const inputEvent = (event) =>{
+//       setName(event.target.value);
+//   }
+// const onSubmit=(event)=>{
+//   event.preventDefault();
+//    setFullname(name);
+// };
+//   return(
+//     <>
+//     <h1>Hello 🌅, {fullName} </h1>
+//     <input type='text' placeholder='Write Your Name' onChange={inputEvent} value={name}/><br/><br/>
+//     <button onClick={onSubmit}  >Submit 🤓 </button>
+//     </>
+//   );
+// };
+
+
+//******************************** Three dots******************************
+
+// const fullName =["Aashish","Mishra"];
+
+// const biodata=[1,23, "male",...fullName];
+// console.log(fullName);
+// console.log(biodata);
+
+// export default fullName;
+
+import React, { useState } from "react";
+import ToDolist from "./ToDolist";
+
+const App = () => {
+  const[inputList,setinputList]=useState('');
+  const[Items,setItems]=useState([]);
+  const listofItems=()=>{
+   if(inputList!=="" && Items.length<=9){
+    setItems((oldItems)=>{
+      return(
+        [...oldItems,inputList]
+      )
+    })
+   }
+   if(Items.length>9){
+    alert("You can enter 10 items only")
+   }
+   if(inputList==""){
+    alert("input field required")
+   }
+    setinputList("");
+  }
+  const deleteItems=(id)=>{
+  
+    setItems((oldItems)=>{
+      return oldItems.filter((arrElem,index)=>{
+        return index!=id;
+      })
+    })
+  }
+
+  const inputEvent=(event)=>{
+    setinputList(event.target.value);
+
+  }
+
+
+  return (
+    <>
+      <div className="main_div">
+        <div className="center_div">
+          <br />
+          <h1>ToDo List</h1>
+          <br />
+          <input
+            type="text"
+            placeholder="Add a Items"
+            onChange={inputEvent}
+            value={inputList} 
+            
+            
+          />
+          <button onClick={listofItems}>+</button>
+          <ol>
+          {Items.map((itemVal,i)=>{
+            return(
+              <ToDolist text={itemVal} key={i} id={i} onSelect={deleteItems}></ToDolist>
+            )
+
+          })}
+            
+          </ol>
+        </div>
+      </div>
     </>
- );
- };
- export default App;
+  );
+};
+export default App;
