@@ -382,71 +382,100 @@
 
 // export default fullName;
 
-import React, { useState } from "react";
-import ToDolist from "./ToDolist";
+// import React, { useState } from "react";
 
-const App = () => {
-  const[inputList,setinputList]=useState('');
-  const[Items,setItems]=useState([]);
-  const listofItems=()=>{
-   if(inputList!=="" && Items.length<=9){
-    setItems((oldItems)=>{
-      return(
-        [...oldItems,inputList]
-      )
-    })
-   }
-   if(Items.length>9){
-    alert("You can enter 10 items only")
-   }
-   if(inputList==""){
-    alert("input field required")
-   }
-    setinputList("");
-  }
-  const deleteItems=(id)=>{
+// import ToDolist from "./ToDolist";
+
+// const App = () => {
+//   const[inputList,setinputList]=useState('');
+//   const[Items,setItems]=useState([]);
+//   const listofItems=()=>{
+//    if(inputList!=="" && Items.length<=9){
+//     setItems((oldItems)=>{
+//       return(
+//         [...oldItems,inputList]
+//       )
+//     })
+//    }
+//    if(Items.length>9){
+//     alert("You can enter 10 items only")
+//    }
+//    if(inputList==""){
+//     alert("input field required")
+//    }
+//     setinputList("");
+//   }
+//   const deleteItems=(id)=>{
   
-    setItems((oldItems)=>{
-      return oldItems.filter((arrElem,index)=>{
-        return index!=id;
-      })
-    })
-  }
+//     setItems((oldItems)=>{
+//       return oldItems.filter((arrElem,index)=>{
+//         return index!=id;
+//       })
+//     })
+//   }
 
-  const inputEvent=(event)=>{
-    setinputList(event.target.value);
+//   const inputEvent=(event)=>{
+//     setinputList(event.target.value);
 
-  }
+//   }
 
 
-  return (
-    <>
-      <div className="main_div">
-        <div className="center_div">
-          <br />
-          <h1>ToDo List</h1>
-          <br />
-          <input
-            type="text"
-            placeholder="Add a Items"
-            onChange={inputEvent}
-            value={inputList} 
+//   return (
+//     <>
+//       <div className="main_div">
+//         <div className="center_div">
+//           <br />
+//           <h1>ToDo List</h1>
+//           <br />
+//           <input
+//             type="text"
+//             placeholder="Add a Items"
+//             onChange={inputEvent}
+//             value={inputList} 
             
             
-          />
-          <button onClick={listofItems}>+</button>
-          <ol>
-          {Items.map((itemVal,i)=>{
-            return(
-              <ToDolist text={itemVal} key={i} id={i} onSelect={deleteItems}></ToDolist>
-            )
+//           />
+//           <button onClick={listofItems}>+</button>
+//           <ol>
+//           {Items.map((itemVal,i)=>{
+//             return(
+//               <ToDolist text={itemVal} key={i} id={i} onSelect={deleteItems}></ToDolist>
+//             )
 
-          })}
+//           })}
             
-          </ol>
-        </div>
-      </div>
-    </>
+//           </ol>
+//         </div>
+//       </div>
+   
+//     </>
+//   );
+// };
+// export default App;
+
+// import React from 'react';
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; 
+// const App =()=>{
+//  return(
+// <>
+// <React.Fragment>
+//   <h1>Welcome to my World</h1>
+//   <button className="btn btn-success">Ok</button>
+// </React.Fragment>
+// </>
+//  );
+// };
+// export default App;
+
+import React from 'react';
+import Accordian from './Component/Accordian/Accordian';
+// import Accordian from ""
+
+const App=()=>{
+  return(
+      <>
+      <Accordian/>
+      </>
   );
 };
 export default App;
