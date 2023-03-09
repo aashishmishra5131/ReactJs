@@ -467,15 +467,78 @@
 // };
 // export default App;
 
-import React from 'react';
-import Accordian from './Component/Accordian/Accordian';
-// import Accordian from ""
+// ********************* Accordian************************************
+// import React from 'react';
+// import Accordian from './Component/Accordian/Accordian';
+// // import Accordian from ""
 
+// const App=()=>{
+//   return(
+//       <>
+//       <Accordian/>
+//       </>
+//   );
+// };
+// export default App;
+
+//*************some thing diff********************
+// import React from "react";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// const App=()=>{
+//  return(
+//   <>
+//   <React.Fragment>
+//     <h1 className="text-center  text-capitalize my-5">{" "}<u>Earth24{" "}</u> </h1>
+
+//     <div className="container text-center">
+//   <div className="row">
+//     <div className="col">
+//     <div class="card" >
+//   <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRGI9FgO5WFaMMyRa0lbMiaE2IYQxlFyXS7riUWHZAMjBtxtyVyPDmer44fzFdeVawWLBD9fnOfdyj3WcF7uM82-4GgGPk1LahlaiNU4cIk" className="card-img-top" alt="..." height="200px"/>
+//   <div className="card-body">
+//     <h5 className="card-title">Plantazee Ficus Bonsai Plant</h5>
+//     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" className="btn btn-primary">Add to Cart</a>
+//   </div>
+// </div>
+//     </div>
+//     <div className="col">
+//     <div class="card">
+//   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-ficus-bonsai-plant_467x467.jpg?v=1635575503" className="card-img-top" alt="..." height="200px"/>
+//   <div className="card-body">
+//     <h5 className="card-title">Ficus Bonsai - Plant</h5>
+//     <p className="card-text">There are several tropical and subtropical trees that you can grow indoor. The most common, and the easiest to care for, is the Ficus Bonsai. The Ficus is tolerant of low humidity and is very resilient, making it an excellent choice for beginners.</p>
+//     <a href="#" className="btn btn-primary">Add to Cart</a>
+//   </div>
+// </div>
+//     </div>
+//     <div className="col">
+//     <div class="card">
+//   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-the-fragrant-beauties-pack_467x467.jpg?v=1637238259" className="card-img-top" alt="..." height="200px"/>
+//   <div className="card-body">
+//     <h5 className="card-title">The Fragrant Beauties Pack</h5>
+//     <p className="card-text">Images are for reference purposes only. Actual product may vary in shape or appearance based on climate, age, height, etc. The product is replaceable but not returnable.</p>
+//     <a href="#" className="btn btn-primary">Add to Cart</a>
+    
+//   </div>
+// </div>
+//     </div>
+//   </div>
+// </div>
+//   </React.Fragment>
+//   </>
+//  );
+// };
+// export default App;
+//****************************************Google Keep*******************************************
+import React from 'react';
+ import Statewise from './StatewiseData/Statewise.js';
 const App=()=>{
-  return(
-      <>
-      <Accordian/>
-      </>
+ return(
+    <>
+     <Statewise/>
+     </>
   );
 };
-export default App;
+ export default App;
