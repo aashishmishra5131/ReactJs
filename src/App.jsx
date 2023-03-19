@@ -532,13 +532,82 @@
 // };
 // export default App;
 //****************************************Google Keep*******************************************
+// import React from 'react';
+//  import Statewise from './StatewiseData/Statewise.js';
+// const App=()=>{
+//  return(
+//     <>
+//      <Statewise/>
+//      </>
+//   );
+// };
+//  export default App;
+
+//**************************picachu***********************************************************
+// import React from 'react';
+// import ComA from './ComA';
+// const App=()=>{
+//    return(
+//       <>
+//        <ComA/>
+      
+//        </>
+//     );
+//   };
+//    export default App;
+
+//*******************************Router,use for load web page with open other tab********************************************
+// import React from 'react';
+// import About from './About';
+//  import Contact from './Contact';
+//  import Error from './Error';
+//  import Home from './Home';
+//  import Search from './Search';
+//  import Navbar from './Navbar';
+// import{Routes,Route} from "react-router-dom";
+//  const App=()=>{
+//    return(
+//       <>
+//       <Navbar/>
+//       <Routes>
+//           <Route exact path='/' element={<Home/>}/>
+//           <Route exact path='/search' element={<Search/>}/>
+//          <Route exact path='/about/:userName' element={<About/>}/>
+//          <Route exact path='/contact' element={<Contact/>}/>
+//          <Route exact path='*' element={<Error/>}/>
+//         </Routes>
+    
+//       </>
+//    );
+//  };
+//  export default App;
+
+
+
+//****************************************FIRST PROJECT 75*********************************************** 
 import React from 'react';
- import Statewise from './StatewiseData/Statewise.js';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import Home1 from './Project/Home1';
+import About1 from './Project/About1';
+import Contact1 from './Project/Contact1';
+import Service from './Project/Service';
+import Navbar1 from './Project/Navbar1';
+import{Routes,Route} from "react-router-dom";
 const App=()=>{
- return(
+  return(
     <>
-     <Statewise/>
-     </>
+    <Navbar1/>
+        <Routes>
+             <Route exact path='/' element={<Home1/>}/>
+             <Route exact path='/about' element={<About1/>}/>
+             <Route exact path='/Service' element={<Service/>}/>
+             <Route exact path='/contact' element={<Contact1/>}/>
+             <Route exact path='*' element={<Home1/>}/>       
+        </Routes>
+  
+    </>
   );
 };
- export default App;
+export default App;
+
